@@ -55,3 +55,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.dsmovie-btn:hover {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0 0);
+}
