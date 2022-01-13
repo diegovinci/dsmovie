@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "c0717d27-d1c1-4a37-9fe5-469bf7782c2e",
+		"name": "DSMovie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/movies?page=0&size=12",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/movies/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Score",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movieId\": 3,\n    \"email\": \"ana@gmail.com\",\n    \"score\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/scores",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"scores"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
