@@ -49,7 +49,7 @@ function MovieStars({ score }: Props) {
 
   return (
     <div className="dsmovie-stars-container">
-      {fills.map(fill => <Star fill={fill} />)}
+      {fills.map((fill, index) => <Star key={index} fill={fill} />)}
     </div>
   );
 }
