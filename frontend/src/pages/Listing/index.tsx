@@ -30,7 +30,6 @@ function Listing() {
 
   return (
     <>
-      <p>{pageNumber}</p>
       <div className="container">
         <div className="row">
           {page.content.map((movie) => (
