@@ -18,7 +18,7 @@ public class MovieService {
 
 	@Transactional(readOnly = true)
 	public Page<MovieDTO> findAll(Pageable pageable) {
-		Page<Movie> pageableMovies = movieRepository.findAll(pageable);
+		Page<Movie> pageableMovies = movieRepository.findAllByOrderByIdDesc(pageable);
 		Page<MovieDTO> paginatedMovies = pageableMovies.map(pageableMovie -> new MovieDTO(pageableMovie));
 
 		return paginatedMovies;
